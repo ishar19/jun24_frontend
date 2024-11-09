@@ -5,3 +5,7 @@ export default function Register() {
         </div>
     )
 }
+
+
+// HOMEWORK
+// Add register page with all the same functionality as the login page

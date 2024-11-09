@@ -74,10 +74,3 @@ export default function Login() {
         </div>
     )
 }
-
-
-// HOMEWORK
-// 1. Add form validation (only submit if all fields are filled otherwise show error message below the input)
-// 2. Add a loading state (show a spinner)
-// 3. Add a success state (show a success message) (react-toastify) (hot-toast)
-// 4. Add a error state (show an error message) (react-toastify) (hot-toast)
