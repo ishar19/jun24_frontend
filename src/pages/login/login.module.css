@@ -4,3 +4,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
