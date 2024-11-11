@@ -1,5 +1,5 @@
 import './App.css'
-import { Login, Register } from './pages'
+import { Login, Register, Home, JobDetail } from './pages'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 function App() {
@@ -8,9 +8,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-
+          <Route path="/" element={<Home />} />
+          <Route path="/job/:id" element={<JobDetail />} />
         </Routes>
       </BrowserRouter>
       <Toaster />

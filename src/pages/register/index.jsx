@@ -2,7 +2,7 @@ import { useState } from "react"
 import styles from "./register.module.css"
 import toast from "react-hot-toast"
 import { register } from "../../services"
-export default function Login() {
+export default function Register() {
     const [formData, setFormData] = useState({
         email: "",
         name: "",
