@@ -1,5 +1,5 @@
 import './App.css'
-import { Login, Register, Home, JobDetail } from './pages'
+import { Login, Register, Home, JobDetail, Create, Edit } from './pages'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 function App() {
@@ -12,6 +12,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home />} />
           <Route path="/job/:id" element={<JobDetail />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/edit/:id" element={<Edit />} />
         </Routes>
       </BrowserRouter>
       <Toaster />

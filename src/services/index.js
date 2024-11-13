@@ -57,3 +57,53 @@ export const getJobById = async (id) => {
         throw new Error('Something went wrong')
     }
 }
+
+export const createJob = async (data) => {
+    const response = await fetch(`${BACKEND_URL}/api/job`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `${localStorage.getItem("token")}`
+        },
+        body: JSON.stringify(data)
+    })
+    if (response.status === 200) {
+        return response.json()
+    }
+    else {
+        throw new Error('Something went wrong')
+    }
+}
+
+export const updateJob = async (id, data) => {
+    const response = await fetch(`${BACKEND_URL}/api/job/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `${localStorage.getItem("token")}`
+        },
+        body: JSON.stringify(data)
+    })
+    if (response.status === 200) {
+        return response.json()
+    }
+    else {
+        throw new Error('Something went wrong')
+    }
+}
+
+export const deleteJob = async (id) => {
+    const response = await fetch(`${BACKEND_URL}/api/job/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `${localStorage.getItem("token")}`
+        },
+    })
+    if (response.status === 200) {
+        return response.json()
+    }
+    else {
+        throw new Error('Something went wrong')
+    }
+}
